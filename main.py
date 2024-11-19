@@ -34,19 +34,11 @@ def driver_init():
 
     return driver
 
-#url=input("Enter url:")
-#if url=="":
-    #url = "https://www.flybuys.com.au/"
-#parsed_url = urlparse(url)
-#domain = parsed_url.netloc.lstrip('www.')
-#print(domain)
 driver = driver_init()
 #queries = ["management team at manchester united"]
 while True:
     query=input("Enter query:")
     if query !="":
-        #driver.get("https://www.bing.com/search?q="+query.replace(' ', '+').replace(":","%3A"))
-        #print("https://www.bing.com/search?q="+query.replace(' ', '+').replace(":","%3A"))
         driver.get('https://www.bing.com')
         time.sleep(5)
         search_box = driver.find_element(By.ID, 'sb_form_q')
